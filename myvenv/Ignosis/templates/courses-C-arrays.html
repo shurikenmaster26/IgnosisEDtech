@@ -1,0 +1,40 @@
+{% extends "courses-C_layout.html" %}
+{% block content %}
+    <div class="C_boxtitle">
+        <img class="C_PL" src="static/C_PL.png">  <!--title-->
+        <h1 class="Courseheadline">Chapter 9- Arrays</h1>
+    </div>
+    <div class="CONTENT">
+        p><b>array</b></p>
+
+        <p>Arrays in C are used to store multiple elements of the same data type sequentially in memory. They provide a convenient way to manage collections of data. Here's an overview:</p>
+        
+        
+        <p>declaration and initialisation</p>
+        
+        <p>Declaration: To declare an array, specify the data type of its elements and its size in square brackets [].
+        cCopy code
+        int numbers[5]; // Declares an array of 5 integers 
+        Initialization: Arrays can be initialized upon declaration or later by assigning values to individual elements.
+        </p>
+        <p>accessing array elements</p>
+        <p>Indexing: Elements within an array are accessed using their indices (starting from 0).</p>
+        
+        <p>array and pointer realtion</p>
+        <p>Array Name as a Pointer: In many cases, an array's name acts as a pointer to its first element.
+        
+        int arr[5] = {1, 2, 3, 4, 5}; int *ptr = arr; // ptr points to the first element of arr 
+        Pointer Arithmetic: Utilizing pointers, you can iterate through array elements using pointer arithmetic
+        </p>
+        <p>multi dimentional array</p>
+        <p>C supports multi-dimensional arrays, allowing you to create arrays with multiple dimensions</p>
+        <p>usage</p>
+        <p>Arrays are extensively used for storing and manipulating collections of data such as lists, matrices, strings, and more.
+            They're employed in algorithms, data structures (like stacks, queues), and various computational tasks.
+        </p>
+        <p>Understanding arrays is fundamental in C programming. They offer a straightforward way to work with collections of data, but it's important to manage their size and indices properly to avoid issues like buffer overflows or accessing out-of-bound elements.</p>
+        
+        
+    </div>
+
+{% endblock content %}

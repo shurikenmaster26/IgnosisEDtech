@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        {% if title %}
+            <title>Ignosis- {{title}}</title>
+        {% else %}
+            <title>Ignosis- learning is exciting</title>
+        {% endif %}
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico')}}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles-Courses.css')}}">
+
+        <!--Styles-->
+
+
+
+
+    </head>
+    <body>
+        
+        <!-- Navigation-->
+        <!-- Navigation-->
+        <nav class="navbar navbar-dark bg-dark static-top">
+            <div class="container">
+                <a href="/home"><img src="static/logo.png" class="navbar-brand" href="#!" alt="IGNOSIS"></a>
+                
+                {% if current_user.is_authenticated %}
+                <div class="NaviButton">
+                    <a class="btn btn-primary" href="/leaderboard" >Leaderboard</a>
+                    <a class="btn btn-primary"  href="/courses" >Courses</a>
+                    <a class="btn btn-primary" href="/practise" >Practise</a>
+                    <a class="btn btn-primary" onclick="window.location.href='http://localhost:5000/profile'" style="margin-right: 0px; padding:-40vh">Profile</a>
+                </div>
+                <div class="navbar-profile">
+                    <a class=username href="/profile"><h2 class="account-headinG">{{ current_user.username }}</h2></a> 
+                    <a href="/account-settings"><img src="{{ image_file }}" class="navbar-PFP" href="#!" alt="Your profile"></a>
+                </div>
+                {% else %}
+                <div class="NaviButton">
+                    
+                    <a class="btn btn-primary"  href="/courses" >Courses</a>
+                    <a class="btn btn-primary" href="/practise" >Practise</a>
+                    <a class="btn btn-primary" onclick="window.location.href='http://localhost:5000/login'" style="margin-right: 0px; padding:-40vh">Log in</a>
+                </div>
+                {% endif %}
+
+            </div>
+        </nav>
+
+
+        <header class="MasthaD">
+            
+            <div class="banner1"> <!--background image-->
+                <div class="banner2"> <!-- white background-->
+                    <h1 class="Courseheadline">Our Courses</h1>
+                    <h2 class="Coursesubline">Explore and learn.</h2>
+
+                    <div class="Courselist">
+                        <div class="Course1">
+                            <div class="C_box">
+                                <div class="C_boxtitle">
+                                    <img class="C_PL" src="static/C_PL.png">
+                                    <a class="simple"  href="/courses-C" ><h3 class="desc">C</h3></a>
+                                </div>
+                                <p class="desc2">A robust introduction to get you started with C, the language which changed it all.</p>
+                            </div>
+                            
+        
+                            <div class="Java_box">
+                                <div class="Java_boxtitle">
+                                    <img class="Java_PL" src="static/Java-Logo.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">Java</h3></a>
+                                </div>
+                                <p class="desc2">Unlock your potential with Java. Master OOP, platform independence, and STI in our hands-on, career-boosting course</p>
+                                
+                            </div> 
+                            <p class="comingsoon">Coming soon!</p>   
+
+                            <div class="Cpp_box">
+                                <div class="Cpp_boxtitle">
+                                    <img class="Cpp_PL" src="static/C++.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">C++</h3></a>
+                                </div>
+                                <p class="desc2">Master coding with the sharpest tool in the box. Step up your game with C++ to write powerful programs.</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+
+                        </div>
+    
+                        <div class="Course2">
+                            <div class="Python_box">
+                                <div class="Python_boxtitle">
+                                    <img class="Python_PL" src="static/Python-PL.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">Python</h3></a>
+                                </div>
+                                <p class="desc2">Dive into Python's simplicity and power. From web development to AI, it's the language transforming ideas into reality effortlessly.</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+        
+                            <div class="Flask_box">
+                                <div class="Flask_boxtitle">
+                                    <img class="Flask_PL" src="static/Flask.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">Flask</h3></a>
+                                </div>
+                                <p class="desc2">Discover Flask, your gateway to elegant web development. With simplicity and flexibility, craft dynamic applications and conquer the digital realm</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+                            <div class="GameDEV_box">
+                                <div class="GameDEV_boxtitle">
+                                    <img class="GameDEV_PL" src="static/Csharp.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">Game Development</h3></a>
+                                </div>
+                                <p class="desc2">Embark on a thrilling journey in game development. With, Unity and C#, empower yourself to create immersive worlds and epic experiences.</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+                        </div>
+    
+                        <div class="Course3">
+                            <div class="HTMLCSS_box">
+                                <div class="HTMLCSS_boxtitle">
+                                    <img class="HTMLCSS_PL" src="static/HTML_CSS.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">HTML & CSS</h3></a>
+                                </div>
+                                <p class="desc2">Dive into the web's creative realm with HTML and CSS. Craft stunning, responsive designs and bring your ideas to life!</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+                            <div class="JS_box">
+                                <div class="JS_boxtitle">
+                                    <img class="JS_PL" src="static/Javascript-PL.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">Javascript</h3></a>
+                                </div>
+                                <p class="desc2">With Javascript elevate web development, create dynamic, interactive experiences, and shape the future of digital innovation effortlessly.</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+                            <div class="React_box">
+                                <div class="React_boxtitle">
+                                    <img class="React_PL" src="static/React.png">
+                                    <a class="simple"  href="/courses" ><h3 class="desc">React</h3></a>
+                                </div>
+                                <p class="desc2">Enter the world of React and build modern, efficient, and interactive user interfaces becomes a captivating journey of innovation and ease.</p>
+                            </div>
+                            <p class="comingsoon">Coming soon!</p>
+
+
+        
+                        </div>
+
+                    </div>
+
+
+                    
+
+
+                </div>   
+            </div>
+        </header>
+
+
+
+
+
+
+
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item"><a href="#!">About</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Contact</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

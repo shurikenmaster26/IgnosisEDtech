@@ -1,0 +1,46 @@
+{% extends "courses-C_layout.html" %}
+{% block content %}
+<div class="C_boxtitle">
+    <img class="C_PL" src="static/C_PL.png">  <!--title-->
+    <h1 class="Courseheadline">Chapter 1-Introduction</h1>
+</div>
+    <div class="CONTENT">
+        <p>
+            C is a powerful and widely used procedural programming language initially developed by Dennis Ritchie in the early 1970s at Bell Labs. It's known for its efficiency, flexibility, and portability, making it a foundational language for various software and systems. 
+        </p>
+
+        <p><b>Key Features:</b><p>
+        <p> 1.	Procedural Language: C follows a procedural approach, focusing on functions and logical operations to solve problems.</p> 
+        <p> 2.	Mid-Level Language: Combining low-level features with high-level constructs, C allows direct manipulation of hardware while providing high-level abstraction.</p> 
+        <p> 3.	Portability: C programs are highly portable across different platforms and operating systems, making it an excellent choice for system and application development.</p>  
+        
+        <p><b>Basic Structure:</b> </p>
+        <p>A simple C program typically consists of functions. Every C program has a main() function, which is the entry point of execution. </p>
+        <p></p>
+        <div class="codeblock">
+            <h5 class="code">#include&ltstdio.h&gt</h5>
+            <h5 class="code">int main(){ </h5>
+            <h5 class="code">   printf("Hello World"); </h5>
+            <h5 class="code">} </h5>
+        </div>
+        <p><b>Key Concepts: </b></p>
+        <p> 1.Variables and Data Types: C supports various data types such as int, float, char, etc., allowing the declaration of variables to store different kinds of data. </p>
+        <p> 2.Control Structures: if, else, for, while, switch are used for decision-making and looping. </p>
+        <p> 3.Functions: Blocks of code that can be called to perform a specific task, aiding in code organization and reusability. </p>
+        <p> 4.Pointers: Variables that hold memory addresses, enabling direct memory manipulation and efficient memory management. </p>
+        <p> 5.Arrays and Strings: Collections of similar data elements arranged in contiguous memory locations. </p>
+
+        <p><b>Tools for C Programming:</b> </p>
+        <p>•	Text Editors: Notepad++, Visual Studio Code, Sublime Text</p>
+        <p>•	C Compilers: GCC (GNU Compiler Collection), Clang, Microsoft Visual C++</p>
+
+        <p><b>Conclusion</b></p>
+        <p>C programming lays a strong foundation for understanding programming concepts, memory management, and system-level interactions. Its simplicity and efficiency make it a valuable language for beginners and professionals alike. Starting with basic concepts and gradually building complexity through practice is the key to mastering C programming. </p>
+        <div class="practisebutton">
+            <a class="btn btn-primary"  href="/practise-C-Intro" >Proceed to practise?</a>
+        </div>
+        
+
+
+    </div>
+{% endblock content %}

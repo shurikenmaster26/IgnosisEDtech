@@ -1,0 +1,54 @@
+{% extends "courses-C_layout.html" %}
+{% block content %}
+    <div class="C_boxtitle">
+        <img class="C_PL" src="static/C_PL.png">  <!--title-->
+        <h1 class="Courseheadline">Chapter 2-Installation</h1>
+    </div>
+    <div class="CONTENT">
+        <h1>Installing VS Code</h1>
+        <h3>For Windows</h3>
+        <ol>
+            <li>Download the Visual Studio Code installer from the official website</li>
+            <li>Run the installer and follow the on-screen instructions.</li>
+            <li>Once installed, open VS Code.</li>
+        </ol>
+    
+        <h3>For Mac: </h3>
+        <ol>
+            <li>Download the Visual Studio Code installer from the official website</li>
+            <li>Open the downloaded .dmg file</li>
+            <li>Drag the VSCode icon to the applications folder</li>
+            <li>open VSCode from the applications folder</li>
+        </ol>
+    
+        <h2>Setting up MinGW Compiler: </h2><h4>For Windows: </h4>
+        <p>MinGW (Minimalist GNU for Windows) provides a set of freely available and freely distributable compilers.</p>
+        <ol>
+            <li>Download the MinGW installer from the official website</li>
+            <li>Run the installer and select the components you want to install. Make sure to include the C and C++ compilers.</li>
+            <li>During installation, choose the installation directory. Note this directory for later use.</li>
+            <li>Add the MinGW bin directory to your system's PATH environment variable. This allows VS Code to find the compiler. To do this:
+                <ul>
+                    <li>Right-click on "This PC" or "Computer" on your desktop or in File Explorer.</li>
+                    <li>Click on "Properties."</li>
+                    <li>Click on "Advanced system settings."</li>
+                    <li>Click on "Environment Variables..."</li>
+                    <li>Under "System variables," find the "Path" variable and click "Edit..."</li>
+                    <li>Add the path to the MinGW bin directory (e.g., C:\MinGW\bin).</li>
+                </ul>
+            </li>
+            <li>Open a new command prompt and test the installation by typing gcc --version and g++ --version. You should see version information.</li>
+        </ol>
+    
+        <h3>For Mac: </h3>
+        <p>On Mac, you can use the Xcode Command Line Tools, which include the GCC compiler.</p>
+        <ol>
+            <li>Open Terminal</li>
+            <li>Run the following command to install the Xcode Command Line Tools: xcode-select --install <br> Follow the on-screen instructions to complete the installation</li>
+            <li>Test the installation by typing gcc --version in the Terminal. You should see version information.</li>
+        </ol>
+        
+    </div>
+
+
+{% endblock content %}

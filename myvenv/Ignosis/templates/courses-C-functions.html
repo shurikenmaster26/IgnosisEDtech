@@ -1,0 +1,58 @@
+{% extends "courses-C_layout.html" %}
+{% block content %}
+    <div class="C_boxtitle">
+        <img class="C_PL" src="static/C_PL.png">  <!--title-->
+        <h1 class="Courseheadline">Chapter 8- Functions</h1>
+    </div>
+    <div class="CONTENT">
+        <p>Functions in C are essential for modularizing code, making it more organized and reusable. They allow you to break down a program into smaller, manageable parts. Here's an overview</p>
+        <p>Function Declaration:</p>
+        <p>A function in C typically consists of a function prototype (declaration) and its definition. The prototype specifies the function's name, return type, and parameter types (if any).
+
+        </p>
+        <p>// Function prototype
+        return_type function_name(parameter_type1, parameter_type2, ...);
+        </p>
+        <p>Function Definition:</p>
+        <p>The function definition contains the actual code that the function executes. It includes the function header and the body enclosed in curly braces {}.</p>
+        <p>// Function definition
+        return_type function_name(parameter_type1 param1, parameter_type2 param2) {
+            // Function body
+            // Perform operations using param1 and param2
+            return result; // Return value of type return_type
+        }
+        </p>
+        <p>// Function prototype
+        int add(int a, int b);
+
+        // Function definition
+        int add(int a, int b) {
+            int sum = a + b;
+            return sum;
+        }
+        </p>
+        <p>Function Components</p>
+        <p>Return Type: Specifies the type of data that the function will return. If a function doesn't return anything, its return type is void.
+
+        </p>
+        <p>Function Name: A unique identifier for the function.</p>
+        <p>Parameters: Values that the function can accept. Parameters are optional; a function can have none or multiple parameters.</p>
+
+        <p>Function Body: The actual code that the function executes, enclosed within curly braces {}.</p>
+
+        <p>Return Statement: Specifies the value to be returned by the function. The return statement exits the function and sends the value back to the calling code.</p>
+
+        <p>Function Calls:
+        To use a function, you call it by its name and pass arguments (if required).
+
+        </p>
+
+        <p>Function Prototypes:</p>
+
+        <p>Declaring the function prototype before its use allows the compiler to understand the function's signature before encountering its actual definition.</p>
+        <p>Function Scope:</p>
+        <p>Variables declared within a function have local scope, meaning they can only be accessed within that function. Parameters and variables declared in the function are typically destroyed once the function finishes executing.</p>
+        <p>Functions are a cornerstone of structured programming, enabling code reuse and making programs more organized and easier to maintain.</p>      
+    </div>
+
+{% endblock content %}

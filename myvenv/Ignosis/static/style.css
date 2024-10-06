@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.banner{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url(gotham.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.logo{
+    width: 25vh;
+    cursor: pointer;
+}
+.navbar{
+    width: 85%;
+    margin:auto;
+    padding:35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left:55px;
+    position:relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+}
+
+.navbar ul li:hover:after{
+    width:100%
+}
+
+.content{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Times New Roman';
+    font:normal;
+    margin-left: 170px;
+    margin-top: 40px;  
+}
+
+.aim{
+    margin-top: 30px;
+    font-size: 15px;
+    color:#b7b7b7;
+}
+
+.SUbutton{
+    margin-left:800px;
+    margin-top: -50px;
+}
+
+button{
+    width: 200px;
+    padding:15px 0;
+
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+
+    border: 2px solid #009688;
+    background: #009688;
+    color: #fff;
+
+    cursor: pointer;
+    transition: 0.5s;
+    
+
+}
+
+button:hover{
+    background-color: #009688;
+
+}

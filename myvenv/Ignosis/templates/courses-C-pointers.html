@@ -1,0 +1,45 @@
+{% extends "courses-C_layout.html" %}
+{% block content %}
+    <div class="C_boxtitle">
+        <img class="C_PL" src="static/C_PL.png">  <!--title-->
+        <h1 class="Courseheadline">Chapter 10- Pointers</h1>
+    </div>
+    <div class="CONTENT">
+        <p>Pointers in C are variables that store memory addresses. They are powerful and fundamental in C programming, offering direct access to memory locations. Here's an overview:</p>
+
+        <p><b>declaration and initialisation</b></p>
+        <p>Declaration: To declare a pointer, specify the data type it points to, followed by an asterisk *.</p>
+        
+        <p>Initialization: Pointers can be initialized to point to the address of another variable using the & (address-of) operator.</p>
+        
+        <p>Dereferencing:
+        Accessing Value: To access the value a pointer points to, use the * (dereference) operator.
+        </p>
+        
+        <p><b>pointer arithimatic,</b></p>
+        
+        <p>Pointer Arithmetic: Involves adding or subtracting integers to a pointer, which moves the pointer by a certain number of elements based on the data type it points to.</p>
+        
+        <p><b>null pointer</b></p>
+        <p>Null Pointer: A pointer that doesn’t point to any memory location. It's commonly used to indicate that the pointer isn't intended to point anywhere valid.</p>
+        <p><b> pointer and array relationship</b></p>
+        
+        <p>Arrays and pointers have a close relationship in C. An array's name can act as a pointer to its first element.</p>
+        
+        <p><b>usage</b></p>
+        <p>Pointers are used for dynamic memory allocation, accessing hardware, creating data structures like linked lists, passing arguments to functions efficiently, and optimizing certain algorithms.
+        Understanding pointers is crucial for working with memory, data structures, and low-level operations in C programming. While powerful, they also require careful handling to avoid issues like segmentation faults or unintended memory manipulation.
+        </p>
+        <div class="practisebutton">
+            <a class="btn btn-primary"  href="/courses" >Proceed to practise?</a>
+        </div>
+            
+            
+            
+            
+            
+
+    </div>
+
+
+{% endblock content %}
